@@ -18,7 +18,7 @@ class TopTwentyContainer extends Component {
 
   render() {
     return (
-      <div className="music-box">
+      <div>
         <h2>Top Twenty</h2>
         <table>
         <TopTwentyDetail music={this.state.music}/>

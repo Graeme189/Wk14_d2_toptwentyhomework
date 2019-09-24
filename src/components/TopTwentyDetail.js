@@ -3,11 +3,12 @@ import React from 'react';
 const TopTwentyDetail = (props) => {
   const body = props.music.map((song, index) => {
     return (
-      <div>
-      <p>Title:</p><p>{song["im:name"].label}</p>
-      <p>Artist:</p><p> {song["im:artist"].label}</p>
-      <p>Chart position:</p><p>{index + 1}</p>
-      </div>
+      <tr key={index}>
+      <td>{index + 1}</td>
+      <td>{song["im:name"].label}</td>
+      <td>{song["im:artist"].label}</td>
+      <td><img src={song["im:image"][0].label} alt="N/A"/></td>
+      </tr>
     );
   })
 
